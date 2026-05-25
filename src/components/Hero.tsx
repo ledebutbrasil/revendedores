@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
             Vagas limitadas por cidade
           </span>
           <h1 className="font-extrabold text-[32px] md:text-[44px] lg:text-[56px] leading-[1.02] tracking-tight mt-6 mb-6">
-            Oportunidade para revendedores: produtos virais Ledebut com <em className="not-italic text-pink font-extrabold">margem de revenda de até 6x</em>
+            Oportunidade para revendedores: produtos virais Ledebut com <em className="not-italic text-pink font-extrabold">margem de revenda de até 5x</em>
           </h1>
           <p className="text-base md:text-lg text-[#333] max-w-[560px] leading-[1.5] mb-8">
             A procura está alta e estamos abrindo novos parceiros físicos para atender essa demanda com suporte direto da fábrica.
