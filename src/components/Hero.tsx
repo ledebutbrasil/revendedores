@@ -14,7 +14,7 @@ export const Hero: React.FC = () => {
           />
         </div>
 
-        {/* Coluna de Texto (Abaixo no mobile, Esquerda no desktop) */}
+        {/* Coluna de Texto (Abaixo no mobile, Esquerda no desktooop) */}
         <div className="flex flex-col justify-center items-start text-left px-5 sm:px-10 lg:pl-[max(32px,calc((100vw-1240px)/2+32px))] lg:pr-14 py-12 sm:py-16 md:py-20 z-10 bg-white">
           <span className="inline-flex items-center gap-2.5 bg-pink text-white font-bold text-xs tracking-wider px-3.5 py-2.25 rounded-full uppercase before:content-[''] before:w-2 before:h-2 before:bg-white before:rounded-full before:shadow-[0_0_0_4px_rgba(255,255,255,0.25)] mb-6">
             Vagas limitadas por cidade
