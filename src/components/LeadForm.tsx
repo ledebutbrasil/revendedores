@@ -5,32 +5,32 @@ export const LeadForm: React.FC = () => {
 
   return (
     <section 
-      className="relative py-24 md:py-20 bg-pink text-white overflow-hidden before:absolute before:inset-0 before:bg-[radial-gradient(1000px_600px_at_50%_120%,rgba(255,255,255,0.18),transparent_65%),radial-gradient(800px_500px_at_0%_0%,rgba(0,0,0,0.2),transparent_60%)] before:pointer-events-none" 
+      className="relative py-24 md:py-20 bg-ink text-white overflow-hidden border-t border-[#1a1a1a]" 
       id="form"
     >
-      {/* Decorative blurred background shapes */}
-      <div className="absolute top-1/2 left-10 -translate-y-1/2 w-72 h-72 bg-white/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-5 right-10 w-96 h-96 bg-black/10 rounded-full blur-3xl pointer-events-none" />
+      {/* Glows animados de fundo para profundidade e estética moderna */}
+      <div className="absolute top-[-10%] left-[10%] w-[350px] md:w-[450px] h-[350px] md:h-[450px] bg-pink/20 rounded-full blur-[100px] md:blur-[130px] animate-glow-slow pointer-events-none" />
+      <div className="absolute bottom-[-15%] right-[5%] w-[400px] md:w-[500px] h-[400px] md:h-[500px] bg-pink/15 rounded-full blur-[120px] md:blur-[150px] animate-glow-reverse pointer-events-none" />
 
-      <div className="relative wrap max-w-[800px] mx-auto text-center px-4">
+      <div className="relative wrap max-w-[800px] mx-auto text-center px-4 z-10">
         {/* Badge / Tag */}
-        <span className="inline-flex items-center gap-1.5 bg-white/12 backdrop-blur-md text-white font-semibold text-xs tracking-wider uppercase px-4 py-1.5 rounded-full border border-white/10 mb-6">
-          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+        <span className="inline-flex items-center gap-2 bg-pink/10 backdrop-blur-md text-pink font-semibold text-xs tracking-wider uppercase px-4 py-1.5 rounded-full border border-pink/25 mb-6">
+          <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse" />
           Atendimento On-line
         </span>
 
         {/* Title */}
         <h2 className="font-extrabold text-[36px] sm:text-[44px] md:text-[52px] tracking-tight leading-[1.05] mt-0 mb-5 text-white">
-          Fale direto com a <em className="not-italic text-ink">fábrica</em> pelo WhatsApp
+          Fale direto com a <em className="not-italic text-pink">fábrica</em> pelo WhatsApp
         </h2>
 
         {/* Subtitle */}
-        <p className="text-base sm:text-lg leading-relaxed text-white/92 max-w-[620px] mx-auto mb-10">
+        <p className="text-base sm:text-lg leading-relaxed text-[#b0b0b5] max-w-[620px] mx-auto mb-10">
           Clique no botão abaixo para iniciar o seu atendimento. Nosso time comercial está online pronto para te enviar o catálogo completo, tabela de preços de fábrica e tirar todas as suas dúvidas.
         </p>
 
         {/* Action Button & Trust Info Card */}
-        <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.25)] max-w-[600px] mx-auto">
+        <div className="bg-[#121214]/65 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.55)] max-w-[600px] mx-auto">
           <a
             href={whatsappUrl}
             target="_blank"
@@ -49,17 +49,17 @@ export const LeadForm: React.FC = () => {
 
           {/* Microcopy / Trust signals */}
           <div className="grid grid-cols-2 gap-4 mt-6 pt-6 border-t border-white/10 text-left">
-            <div className="flex items-center gap-2.5 text-xs text-white/80">
-              <span className="w-5 h-5 rounded-full bg-white/8 inline-flex items-center justify-center shrink-0">
-                <svg className="w-2.5 h-2.5 fill-current text-white" viewBox="0 0 24 24">
+            <div className="flex items-center gap-2.5 text-xs text-[#d0d0d5]">
+              <span className="w-5.5 h-5.5 rounded-full bg-pink/10 text-pink inline-flex items-center justify-center shrink-0">
+                <svg className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24">
                   <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
                 </svg>
               </span>
               <span>Catálogo Completo Grátis</span>
             </div>
-            <div className="flex items-center gap-2.5 text-xs text-white/80">
-              <span className="w-5 h-5 rounded-full bg-white/8 inline-flex items-center justify-center shrink-0">
-                <svg className="w-2.5 h-2.5 fill-current text-white" viewBox="0 0 24 24">
+            <div className="flex items-center gap-2.5 text-xs text-[#d0d0d5]">
+              <span className="w-5.5 h-5.5 rounded-full bg-pink/10 text-pink inline-flex items-center justify-center shrink-0">
+                <svg className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24">
                   <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
                 </svg>
               </span>
@@ -69,7 +69,7 @@ export const LeadForm: React.FC = () => {
         </div>
 
         {/* Legal text / notice */}
-        <p className="text-xs text-white/70 mt-6 max-w-[420px] mx-auto">
+        <p className="text-xs text-[#808085] mt-6 max-w-[420px] mx-auto">
           *Atendimento comercial de segunda a sexta-feira, das 09h às 18h.
         </p>
       </div>

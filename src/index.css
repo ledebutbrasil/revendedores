@@ -103,3 +103,30 @@
   border-color: rgba(255, 0, 140, 0.25);
 }
 
+/* Animação para glows de fundo */
+@keyframes floatGlow1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, -60px) scale(1.15);
+  }
+}
+
+@keyframes floatGlow2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1.2);
+  }
+  50% {
+    transform: translate(-50px, 40px) scale(0.95);
+  }
+}
+
+.animate-glow-slow {
+  animation: floatGlow1 16s ease-in-out infinite;
+}
+
+.animate-glow-reverse {
+  animation: floatGlow2 20s ease-in-out infinite;
+}
+
