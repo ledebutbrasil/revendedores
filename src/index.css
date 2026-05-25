@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-pink: #FF008C;
+  --color-pink-soft: #ffd6ec;
+  --color-ink: #0A0A0A;
+  --color-ink-2: #1a1a1a;
+  --color-line: #ececec;
+  --color-muted: #6b6b6b;
+  --color-bg: #ffffff;
+
+  --font-sora: 'Sora', system-ui, sans-serif;
+  
+  --animate-pulse-slow: pulse 1.8s infinite;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sora);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Utilitário para o container principal */
+  .wrap {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: clamp(20px, 4vw, 56px);
+    padding-right: clamp(20px, 4vw, 56px);
+  }
+}
+
+/* Keyframes customizados */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 140, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(255, 0, 140, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 140, 0);
+  }
+}
+
+/* Image placeholder pattern */
+.ph {
+  --c1: #1c1c1c;
+  --c2: #0e0e0e;
+  background: repeating-linear-gradient(135deg, var(--c1) 0 14px, var(--c2) 14px 28px);
+  color: #9a9a9a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ph::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-sora);
+  font-size: 12.5px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  white-space: nowrap;
+}
+
+.ph.light {
+  --c1: #f2f2f2;
+  --c2: #e8e8e8;
+  color: #888;
+}
+
+.ph.light::after {
+  background: rgba(255, 255, 255, 0.85);
+  color: #444;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.ph.pink-tone {
+  --c1: #ffe6f3;
+  --c2: #ffd2eb;
+}
+
+.ph.pink-tone::after {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-pink);
+  border-color: rgba(255, 0, 140, 0.25);
+}
+
