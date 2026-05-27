@@ -1,3 +1,4 @@
+import { TopBar } from './components/TopBar';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Highlights } from './components/Highlights';
@@ -10,6 +11,7 @@ import { Footer } from './components/Footer';
 function App() {
   return (
     <div className="min-h-screen bg-white text-ink font-sora antialiased text-rendering-optimize-legibility">
+      <TopBar />
       <Navbar />
       <main>
         <Hero />

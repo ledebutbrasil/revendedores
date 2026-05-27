@@ -20,8 +20,8 @@ export const LeadForm: React.FC = () => {
         </span>
 
         {/* Title */}
-        <h2 className="font-extrabold text-[36px] sm:text-[44px] md:text-[52px] tracking-tight leading-[1.05] mt-0 mb-5 text-white">
-          Fale direto com a <em className="not-italic text-pink">fábrica</em> pelo WhatsApp
+        <h2 className="font-fraunces font-extrabold text-[36px] sm:text-[44px] md:text-[52px] tracking-tight leading-[1.05] mt-0 mb-5 text-white">
+          Fale direto com a <em className="italic text-pink">fábrica</em> pelo WhatsApp
         </h2>
 
         {/* Subtitle */}

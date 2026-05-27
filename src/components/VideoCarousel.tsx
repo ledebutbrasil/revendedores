@@ -111,8 +111,8 @@ export const VideoCarousel: React.FC = () => {
       <div className="wrap">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-11">
           <div className="text-left">
-            <h2 className="font-extrabold text-[26px] sm:text-[32px] lg:text-[40px] tracking-tight leading-[1.02] mt-0 mb-0 max-w-[760px]">
-              Estão em <em className="not-italic text-pink font-extrabold">todas as redes</em>
+            <h2 className="font-fraunces font-extrabold text-[26px] sm:text-[32px] lg:text-[40px] tracking-tight leading-[1.02] mt-0 mb-0 max-w-[760px]">
+              Estão em <em className="italic text-pink font-extrabold">todas as redes</em>
             </h2>
           </div>
           <div className="text-left md:max-w-[420px]">
