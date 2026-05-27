@@ -14,11 +14,11 @@ export const Hero: React.FC = () => {
           </span>
           
           <h1 className="font-fraunces font-extrabold text-[32px] md:text-[42px] lg:text-[48px] xl:text-[54px] leading-[1.05] tracking-tight mt-0 mb-6 text-ink">
-            Oportunidade para revendedores: produtos virais Ledebut com <em className="italic text-pink font-extrabold">margem de revenda de até 5x</em>
+            Acesso direto à <em className="italic text-pink font-extrabold">fábrica</em> para lojistas e revendedores
           </h1>
           
           <p className="text-base md:text-lg text-[#4a4a4a] max-w-[560px] leading-[1.5] mb-8 font-medium">
-            A procura está alta e estamos abrindo novos parceiros físicos para atender essa demanda com suporte direto da fábrica.
+            A Ledebut está abrindo novos parceiros no Brasil para atender a alta demanda com margens de até 5x.
           </p>
           
           <div className="flex flex-wrap items-center gap-3.5">
@@ -86,12 +86,12 @@ export const Hero: React.FC = () => {
 
           {/* Título em Rosa */}
           <h1 className="font-fraunces font-extrabold text-[27px] sm:text-[32px] leading-[1.12] tracking-tight text-pink max-w-[320px] sm:max-w-[380px] m-0 mt-4">
-            Produtos virais Ledebut com até 5x de margem
+            Acesso direto à fábrica para lojistas e revendedores
           </h1>
           
           {/* Texto Descritivo */}
-          <p className="font-fraunces text-[13.5px] sm:text-base text-[#111] max-w-[340px] sm:max-w-[380px] leading-[1.4] m-0 mt-3 font-medium">
-            A procura está alta e estamos abrindo novos parceiros físicos para atender essa demanda.
+          <p className="font-fraunces text-[12px] xs:text-[13px] sm:text-base text-[#111] max-w-[310px] xs:max-w-[340px] sm:max-w-[380px] leading-[1.4] m-0 mt-3 font-medium">
+            A Ledebut está abrindo novos parceiros no Brasil para atender a alta demanda com margens de até 5x
           </p>
           
           {/* Botão Preto Único */}
