@@ -1,6 +1,18 @@
 import React from 'react';
 
+const whatsappNumbers = ['557181751436', '557182960926', '557182931532'];
+const whatsappMessage = 'Olá! Gostaria de receber o catálogo de revenda da Ledebut e falar com a fábrica.';
+
 export const Hero: React.FC = () => {
+  const handleWhatsappRedirect = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+
+    const randomNumber = whatsappNumbers[Math.floor(Math.random() * whatsappNumbers.length)];
+    const whatsappUrl = `https://wa.me/${randomNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.location.href = whatsappUrl;
+  };
+
   return (
     <section className="relative overflow-hidden bg-white border-b border-line" id="hero">
       
@@ -24,6 +36,7 @@ export const Hero: React.FC = () => {
           <div className="flex flex-wrap items-center gap-3.5">
             <a 
               href="#form" 
+              onClick={handleWhatsappRedirect}
               className="inline-flex items-center justify-center gap-2.5 bg-pink text-white px-6.5 py-4.5 rounded-full font-bold text-base tracking-wide transition-all hover:bg-[#e60079] hover:-translate-y-[1px] shadow-[0_10px_24px_-10px_rgba(255,0,140,0.55)]"
             >
               Quero falar com a fábrica
@@ -97,6 +110,7 @@ export const Hero: React.FC = () => {
           {/* Botão Preto Único */}
           <a 
             href="#form" 
+            onClick={handleWhatsappRedirect}
             className="inline-flex items-center justify-center bg-ink text-white py-3.5 px-5 rounded-full font-sora font-extrabold text-[12px] xs:text-[13px] sm:text-sm tracking-wider uppercase shadow-[0_12px_24px_-8px_rgba(0,0,0,0.3)] active:scale-[0.98] w-full max-w-[290px] mt-6 cursor-pointer text-center whitespace-nowrap"
           >
             Quero falar com a fábrica
