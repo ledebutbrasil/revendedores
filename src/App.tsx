@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { TopBar } from './components/TopBar';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -7,8 +8,13 @@ import { VideoCarousel } from './components/VideoCarousel';
 import { Testimonials } from './components/Testimonials';
 import { LeadForm } from './components/LeadForm';
 import { Footer } from './components/Footer';
+import { trackLandingView } from './lib/tracking';
 
 function App() {
+  useEffect(() => {
+    trackLandingView();
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-ink font-sora antialiased text-rendering-optimize-legibility">
       <TopBar />

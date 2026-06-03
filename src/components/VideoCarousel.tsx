@@ -73,9 +73,9 @@ export const VideoCarousel: React.FC = () => {
     const diff = index - activeIndex;
     const absDiff = Math.abs(diff);
 
-    let scale = 'scale-100';
-    let opacity = 'opacity-100';
-    let zIndex = 'z-20';
+    let scale: string;
+    let opacity: string;
+    let zIndex: string;
     let margin = 'mx-0';
     let visibility = 'flex';
 

@@ -1,7 +1,19 @@
 import React from 'react';
+import { trackWhatsappClick } from '../lib/tracking';
+
+const whatsappNumber = '5521979246710';
+const whatsappMessage = 'Olá! Gostaria de receber o catálogo de revenda da Ledebut e falar com a fábrica.';
 
 export const LeadForm: React.FC = () => {
-  const whatsappUrl = "https://wa.me/5521979246710?text=Ol%C3%A1!%20Gostaria%20de%20receber%20o%20cat%C3%A1logo%20de%20revenda%20da%20Ledebut%20e%20falar%20com%20a%20f%C3%A1brica.";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+  const handleWhatsappClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+
+    trackWhatsappClick(whatsappUrl, whatsappNumber, 'lead_form', () => {
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    });
+  };
 
   return (
     <section 
@@ -35,6 +47,7 @@ export const LeadForm: React.FC = () => {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleWhatsappClick}
             className="w-full inline-flex items-center justify-center gap-3.5 bg-[#25d366] hover:bg-[#20ba5a] text-white py-5 px-8 rounded-full font-extrabold text-base sm:text-lg tracking-wide transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-[0_15px_30px_-5px_rgba(37,211,102,0.45)] cursor-pointer"
           >
             {/* WhatsApp Icon */}
