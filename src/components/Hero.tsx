@@ -11,7 +11,7 @@ export const Hero: React.FC = () => {
     const randomNumber = whatsappNumbers[Math.floor(Math.random() * whatsappNumbers.length)];
     const whatsappUrl = `https://wa.me/${randomNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
-    trackWhatsappClick(whatsappUrl, randomNumber, 'hero', () => {
+    trackWhatsappClick('hero', () => {
       window.location.href = whatsappUrl;
     });
   };

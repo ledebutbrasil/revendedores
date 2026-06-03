@@ -10,7 +10,7 @@ export const LeadForm: React.FC = () => {
   const handleWhatsappClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
 
-    trackWhatsappClick(whatsappUrl, whatsappNumber, 'lead_form', () => {
+    trackWhatsappClick('lead_form', () => {
       window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
     });
   };

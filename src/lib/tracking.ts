@@ -56,8 +56,6 @@ export const trackLandingView = () => {
 };
 
 export const trackWhatsappClick = (
-  whatsappUrl: string,
-  whatsappNumber: string,
   buttonLocation: string,
   callback?: () => void,
 ) => {
@@ -72,9 +70,7 @@ export const trackWhatsappClick = (
     event: WHATSAPP_EVENT_NAME,
     lead_type: 'revendedor',
     business_unit: 'ledebut',
-    whatsapp_number: whatsappNumber,
     button_location: buttonLocation,
-    destination_url: whatsappUrl,
     page_location: window.location.href,
     page_path: window.location.pathname,
     gtm_container_id: GTM_ID,
@@ -91,8 +87,6 @@ export const trackWhatsappClick = (
     event_label: buttonLocation,
     lead_type: 'revendedor',
     business_unit: 'ledebut',
-    whatsapp_number: whatsappNumber,
-    destination_url: whatsappUrl,
     page_location: window.location.href,
     page_path: window.location.pathname,
     ...getAttributionParams(),
