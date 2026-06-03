@@ -1,4 +1,6 @@
 import React, { useRef, useState } from 'react';
+import { trackWhatsappClick } from '../lib/tracking';
+import { getRandomWhatsappUrl } from '../utils/whatsapp';
 
 interface Video {
   id: number;
@@ -22,6 +24,16 @@ export const VideoCarousel: React.FC = () => {
   const [activeAudioVideoId, setActiveAudioVideoId] = useState<number | null>(null);
   
   const videoRefs = useRef<{ [key: number]: HTMLVideoElement | null }>({});
+
+  const handleWhatsappRedirect = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+
+    const whatsappUrl = getRandomWhatsappUrl();
+
+    trackWhatsappClick('video_carousel', () => {
+      window.location.href = whatsappUrl;
+    });
+  };
 
   const handleVideoClick = (index: number) => {
     setActiveIndex(index);
@@ -214,6 +226,7 @@ export const VideoCarousel: React.FC = () => {
         <div className="mt-6 flex justify-center">
           <a
             href="#form"
+            onClick={handleWhatsappRedirect}
             className="inline-flex items-center gap-2.5 bg-white text-ink px-6.5 py-4.5 rounded-full font-bold text-base tracking-wide transition-all hover:bg-pink hover:text-white duration-200"
           >
             Garantir na minha loja

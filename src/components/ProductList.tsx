@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { trackWhatsappClick } from '../lib/tracking';
+import { getRandomWhatsappUrl } from '../utils/whatsapp';
 
 interface Product {
   id: string;
@@ -64,6 +66,20 @@ const PRODUCTS: Product[] = [
 
 export const ProductList: React.FC = () => {
   const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
+
+  const handleWhatsappRedirect = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    buttonLocation: string,
+  ) => {
+    event.preventDefault();
+
+    const whatsappUrl = getRandomWhatsappUrl();
+
+    setSelectedProductId(null);
+    trackWhatsappClick(buttonLocation, () => {
+      window.location.href = whatsappUrl;
+    });
+  };
 
   return (
     <section className="py-22 md:py-16 bg-white" id="campeoes">
@@ -143,6 +159,7 @@ export const ProductList: React.FC = () => {
             </span>
             <a 
               href="#form" 
+              onClick={(event) => handleWhatsappRedirect(event, 'product_catalog')}
               className="inline-flex items-center gap-2.5 bg-ink text-white px-5 py-3 rounded-full font-bold text-sm tracking-wide transition-all hover:bg-pink duration-200"
             >
               Solicitar catálogo
@@ -211,7 +228,7 @@ export const ProductList: React.FC = () => {
               <div className="mt-5 border-t border-line pt-4">
                 <a 
                   href="#form"
-                  onClick={() => setSelectedProductId(null)}
+                  onClick={(event) => handleWhatsappRedirect(event, 'product_modal')}
                   className="w-full inline-flex items-center justify-center gap-2 bg-pink text-white px-5 py-3 rounded-full font-bold text-sm tracking-wide transition-all hover:bg-[#e60079] hover:-translate-y-[1px] shadow-[0_6px_16px_-6px_rgba(255,0,140,0.5)] cursor-pointer"
                 >
                   <span>Solicitar catálogo</span>

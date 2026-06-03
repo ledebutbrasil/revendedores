@@ -1,17 +1,13 @@
 import React from 'react';
 import { trackWhatsappClick } from '../lib/tracking';
-
-const whatsappNumber = '5521979246710';
-const whatsappMessage = 'Olá! Gostaria de receber o catálogo de revenda da Ledebut e falar com a fábrica.';
+import { getRandomWhatsappUrl } from '../utils/whatsapp';
 
 export const LeadForm: React.FC = () => {
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-
   const handleWhatsappClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
 
     trackWhatsappClick('lead_form', () => {
-      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      window.open(getRandomWhatsappUrl(), '_blank', 'noopener,noreferrer');
     });
   };
 
@@ -44,7 +40,7 @@ export const LeadForm: React.FC = () => {
         {/* Action Button & Trust Info Card */}
         <div className="bg-[#121214]/65 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.55)] max-w-[600px] mx-auto">
           <a
-            href={whatsappUrl}
+            href="#whatsapp"
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsappClick}
