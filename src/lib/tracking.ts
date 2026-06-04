@@ -1,4 +1,5 @@
 const GTM_ID = 'GTM-N7QQ3QMT';
+const GOOGLE_ADS_WHATSAPP_CONVERSION_SEND_TO = 'AW-823234369/-jQVCIrlqLgcEMGexogD';
 
 export const WHATSAPP_EVENT_NAME = 'whatsapp_click';
 
@@ -75,8 +76,6 @@ export const trackWhatsappClick = (
     page_path: window.location.pathname,
     gtm_container_id: GTM_ID,
     ...getAttributionParams(),
-    event_callback: safeCallback,
-    event_timeout: 700,
   };
 
   window.dataLayer = window.dataLayer || [];
@@ -90,6 +89,10 @@ export const trackWhatsappClick = (
     page_location: window.location.href,
     page_path: window.location.pathname,
     ...getAttributionParams(),
+  });
+
+  window.gtag?.('event', 'conversion', {
+    send_to: GOOGLE_ADS_WHATSAPP_CONVERSION_SEND_TO,
     event_callback: safeCallback,
     event_timeout: 700,
   });
