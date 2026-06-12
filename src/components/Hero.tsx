@@ -119,6 +119,23 @@ export const Hero: React.FC = () => {
             <span>Quero falar com a fábrica</span>
           </a>
         </div>
+
+        {/* Indicador liquid glass para continuar a página */}
+        <a
+          href="#campeoes"
+          aria-label="Arraste para cima para ver mais conteúdo"
+          className="liquid-glass-scroll-cue absolute left-1/2 bottom-5 z-20 flex -translate-x-1/2 flex-col items-center gap-1.5 rounded-full px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.18em] text-ink/80"
+        >
+          <span>Arraste</span>
+          <span className="flex items-center gap-1">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#25D366] opacity-60" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#25D366] opacity-90" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#25D366] opacity-60" />
+          </span>
+          <svg className="h-4 w-4 animate-scroll-arrow text-[#25D366]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </a>
       </div>
 
     </section>

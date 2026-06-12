@@ -8,6 +8,7 @@ import { VideoCarousel } from './components/VideoCarousel';
 import { Testimonials } from './components/Testimonials';
 import { LeadForm } from './components/LeadForm';
 import { Footer } from './components/Footer';
+import { FloatingWhatsappButton } from './components/FloatingWhatsappButton';
 import { trackLandingView } from './lib/tracking';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <LeadForm />
       </main>
       <Footer />
+      <FloatingWhatsappButton />
     </div>
   );
 }
