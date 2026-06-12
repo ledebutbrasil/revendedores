@@ -101,8 +101,34 @@
   pointer-events: none;
 }
 
+
+@keyframes scrollDotBlink {
+  0%, 100% {
+    opacity: 0.28;
+    transform: scale(0.86);
+  }
+  22% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  44% {
+    opacity: 0.42;
+    transform: scale(0.9);
+  }
+}
+
+.scroll-dot {
+  opacity: 0.28;
+  animation: scrollDotBlink 1.35s ease-in-out infinite;
+}
+
+.scroll-dot-1 { animation-delay: 0s; }
+.scroll-dot-2 { animation-delay: 0.18s; }
+.scroll-dot-3 { animation-delay: 0.36s; }
+
 @media (prefers-reduced-motion: reduce) {
-  .animate-whatsapp-pulse {
+  .animate-whatsapp-pulse,
+  .scroll-dot {
     animation: none;
   }
 }

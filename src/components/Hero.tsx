@@ -26,7 +26,7 @@ export const Hero: React.FC = () => {
           </span>
           
           <h1 className="font-fraunces font-extrabold text-[32px] md:text-[42px] lg:text-[48px] xl:text-[54px] leading-[1.05] tracking-tight mt-0 mb-6 text-ink">
-            Acesso direto à <em className="italic text-pink font-extrabold">fábrica</em> para lojistas e revendedores
+            Acesso direto à <em className="italic text-pink font-extrabold">fábrica</em> para lojistas e revendedores de cosméticos.
           </h1>
           
           <p className="text-base md:text-lg text-[#4a4a4a] max-w-[560px] leading-[1.5] mb-8 font-medium">
@@ -99,7 +99,7 @@ export const Hero: React.FC = () => {
 
           {/* Título em Rosa */}
           <h1 className="font-fraunces font-extrabold text-[clamp(24px,7.2vw,32px)] leading-[1.08] tracking-tight text-pink max-w-[320px] sm:max-w-[380px] m-0 mt-[clamp(10px,2.2svh,16px)]">
-            Acesso direto à fábrica para lojistas e revendedores
+            Acesso direto à fábrica para lojistas e revendedores de cosméticos.
           </h1>
           
           {/* Texto Descritivo */}
@@ -127,10 +127,10 @@ export const Hero: React.FC = () => {
           className="liquid-glass-scroll-cue absolute left-1/2 bottom-[max(14px,env(safe-area-inset-bottom))] z-20 flex -translate-x-1/2 flex-col items-center gap-1.5 rounded-full px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.18em] text-ink/80"
         >
           <span>Arraste</span>
-          <span className="flex items-center gap-1">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#25D366] opacity-60" />
-            <span className="h-1.5 w-1.5 rounded-full bg-[#25D366] opacity-90" />
-            <span className="h-1.5 w-1.5 rounded-full bg-[#25D366] opacity-60" />
+          <span className="flex flex-col items-center gap-1">
+            <span className="scroll-dot scroll-dot-1 h-1.5 w-1.5 rounded-full bg-[#25D366]" />
+            <span className="scroll-dot scroll-dot-2 h-1.5 w-1.5 rounded-full bg-[#25D366]" />
+            <span className="scroll-dot scroll-dot-3 h-1.5 w-1.5 rounded-full bg-[#25D366]" />
           </span>
           <svg className="h-4 w-4 text-[#25D366]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M6 9l6 6 6-6" />
