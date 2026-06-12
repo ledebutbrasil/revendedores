@@ -70,38 +70,16 @@
   animation: whatsappPulse 1.65s ease-in-out infinite;
 }
 
-@keyframes whatsappFloatPulse {
-  0%, 100% {
-    transform: translate3d(0, 0, 0) scale(1);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.52), 0 18px 36px -12px rgba(37, 211, 102, 0.78);
-  }
-  50% {
-    transform: translate3d(0, -3px, 0) scale(1.04);
-    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0), 0 22px 42px -14px rgba(37, 211, 102, 0.75);
-  }
+
+.mobile-hero-frame {
+  height: calc(100svh - 88px);
+  min-height: 500px;
+  max-height: 720px;
 }
 
-.animate-whatsapp-float-pulse {
-  animation: whatsappFloatPulse 1.9s ease-in-out infinite;
-}
-
-@keyframes liquidGlassFloat {
-  0%, 100% {
-    transform: translate(-50%, 0);
-  }
-  50% {
-    transform: translate(-50%, -7px);
-  }
-}
-
-@keyframes scrollArrowPulse {
-  0%, 100% {
-    opacity: 0.52;
-    transform: translateY(-1px);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(4px);
+@media (max-height: 680px) {
+  .mobile-hero-frame {
+    min-height: calc(100svh - 88px);
   }
 }
 
@@ -111,7 +89,6 @@
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72), 0 16px 34px -18px rgba(10, 10, 10, 0.55);
   backdrop-filter: blur(18px) saturate(1.45);
   -webkit-backdrop-filter: blur(18px) saturate(1.45);
-  animation: liquidGlassFloat 2.2s ease-in-out infinite;
 }
 
 .liquid-glass-scroll-cue::before {
@@ -124,15 +101,8 @@
   pointer-events: none;
 }
 
-.animate-scroll-arrow {
-  animation: scrollArrowPulse 1.25s ease-in-out infinite;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .animate-whatsapp-pulse,
-  .animate-whatsapp-float-pulse,
-  .liquid-glass-scroll-cue,
-  .animate-scroll-arrow {
+  .animate-whatsapp-pulse {
     animation: none;
   }
 }

@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* 2. MODO MOBILE (lg:hidden, oculto no desktop) */}
-      <div className="lg:hidden relative w-full aspect-[9/16] min-h-[580px] xs:min-h-[640px] sm:min-h-[700px] overflow-hidden bg-white">
+      <div className="mobile-hero-frame lg:hidden relative w-full overflow-hidden bg-white">
         {/* Imagem de Fundo (fundo-hero.webp) */}
         <img 
           src="/fundo-hero.webp" 
@@ -82,28 +82,28 @@ export const Hero: React.FC = () => {
         <div className="absolute inset-x-0 top-0 h-[45%] bg-gradient-to-b from-white via-white/95 to-transparent z-1 pointer-events-none" />
         
         {/* Conteúdo Sobreposto no Topo */}
-        <div className="absolute inset-0 z-10 flex flex-col justify-start items-center text-center px-6 pt-3 sm:pt-6 pb-8 overflow-y-auto">
+        <div className="absolute inset-0 z-10 flex flex-col justify-start items-center text-center px-6 pt-[clamp(10px,2.6svh,24px)] pb-[96px]">
           {/* Estrelas */}
-          <div className="flex justify-center gap-0.5 text-pink">
-            <svg className="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            <svg className="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            <svg className="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            <svg className="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            <svg className="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <div className="flex justify-center gap-0.5 text-pink shrink-0">
+            <svg className="w-[clamp(14px,4.6vw,18px)] h-[clamp(14px,4.6vw,18px)] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg className="w-[clamp(14px,4.6vw,18px)] h-[clamp(14px,4.6vw,18px)] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg className="w-[clamp(14px,4.6vw,18px)] h-[clamp(14px,4.6vw,18px)] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg className="w-[clamp(14px,4.6vw,18px)] h-[clamp(14px,4.6vw,18px)] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg className="w-[clamp(14px,4.6vw,18px)] h-[clamp(14px,4.6vw,18px)] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
           </div>
           
           {/* Subtítulo Avaliações */}
-          <span className="font-fraunces text-xs sm:text-sm text-ink font-medium tracking-tight mt-1.5">
+          <span className="font-fraunces text-[clamp(11px,3.2vw,14px)] text-ink font-medium tracking-tight mt-[clamp(4px,1svh,6px)] shrink-0">
             Baseado em +10.000 avaliações
           </span>
 
           {/* Título em Rosa */}
-          <h1 className="font-fraunces font-extrabold text-[27px] sm:text-[32px] leading-[1.12] tracking-tight text-pink max-w-[320px] sm:max-w-[380px] m-0 mt-4">
+          <h1 className="font-fraunces font-extrabold text-[clamp(24px,7.2vw,32px)] leading-[1.08] tracking-tight text-pink max-w-[320px] sm:max-w-[380px] m-0 mt-[clamp(10px,2.2svh,16px)]">
             Acesso direto à fábrica para lojistas e revendedores
           </h1>
           
           {/* Texto Descritivo */}
-          <p className="font-fraunces text-[12px] xs:text-[13px] sm:text-base text-[#111] max-w-[310px] xs:max-w-[340px] sm:max-w-[380px] leading-[1.4] m-0 mt-3 font-medium">
+          <p className="font-fraunces text-[clamp(12px,3.45vw,16px)] text-[#111] max-w-[310px] xs:max-w-[340px] sm:max-w-[380px] leading-[1.32] m-0 mt-[clamp(8px,1.8svh,12px)] font-medium">
             A Ledebut está abrindo novos parceiros no Brasil para atender a alta demanda com margens de até 5x
           </p>
           
@@ -111,7 +111,7 @@ export const Hero: React.FC = () => {
           <a 
             href="#form" 
             onClick={handleWhatsappRedirect}
-            className="animate-whatsapp-pulse inline-flex items-center justify-center gap-2.5 bg-[#25D366] text-white py-3.5 px-5 rounded-full font-sora font-extrabold text-[12px] xs:text-[13px] sm:text-sm tracking-wider uppercase shadow-[0_14px_30px_-10px_rgba(37,211,102,0.75)] transition-all hover:bg-[#1ebe5d] active:scale-[0.98] w-full max-w-[310px] mt-6 cursor-pointer text-center whitespace-nowrap"
+            className="animate-whatsapp-pulse inline-flex items-center justify-center gap-2.5 bg-[#25D366] text-white py-[clamp(12px,3.4svh,14px)] px-5 rounded-full font-sora font-extrabold text-[clamp(12px,3.35vw,14px)] tracking-wider uppercase shadow-[0_14px_30px_-10px_rgba(37,211,102,0.75)] transition-all hover:bg-[#1ebe5d] active:scale-[0.98] w-full max-w-[310px] mt-[clamp(14px,3svh,24px)] cursor-pointer text-center whitespace-nowrap"
           >
             <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white shadow-[0_4px_10px_rgba(0,0,0,0.12)]">
               <img src="/whatsapp-logo.svg" alt="WhatsApp" className="h-5 w-5" />
@@ -124,7 +124,7 @@ export const Hero: React.FC = () => {
         <a
           href="#campeoes"
           aria-label="Arraste para cima para ver mais conteúdo"
-          className="liquid-glass-scroll-cue absolute left-1/2 bottom-5 z-20 flex -translate-x-1/2 flex-col items-center gap-1.5 rounded-full px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.18em] text-ink/80"
+          className="liquid-glass-scroll-cue absolute left-1/2 bottom-[max(14px,env(safe-area-inset-bottom))] z-20 flex -translate-x-1/2 flex-col items-center gap-1.5 rounded-full px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.18em] text-ink/80"
         >
           <span>Arraste</span>
           <span className="flex items-center gap-1">
@@ -132,7 +132,7 @@ export const Hero: React.FC = () => {
             <span className="h-1.5 w-1.5 rounded-full bg-[#25D366] opacity-90" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#25D366] opacity-60" />
           </span>
-          <svg className="h-4 w-4 animate-scroll-arrow text-[#25D366]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <svg className="h-4 w-4 text-[#25D366]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M6 9l6 6 6-6" />
           </svg>
         </a>
