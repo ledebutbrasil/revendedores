@@ -107,13 +107,16 @@ export const Hero: React.FC = () => {
             A Ledebut está abrindo novos parceiros no Brasil para atender a alta demanda com margens de até 5x
           </p>
           
-          {/* Botão Preto Único */}
+          {/* Botão WhatsApp principal no mobile */}
           <a 
             href="#form" 
             onClick={handleWhatsappRedirect}
-            className="inline-flex items-center justify-center bg-ink text-white py-3.5 px-5 rounded-full font-sora font-extrabold text-[12px] xs:text-[13px] sm:text-sm tracking-wider uppercase shadow-[0_12px_24px_-8px_rgba(0,0,0,0.3)] active:scale-[0.98] w-full max-w-[290px] mt-6 cursor-pointer text-center whitespace-nowrap"
+            className="animate-whatsapp-pulse inline-flex items-center justify-center gap-2.5 bg-[#25D366] text-white py-3.5 px-5 rounded-full font-sora font-extrabold text-[12px] xs:text-[13px] sm:text-sm tracking-wider uppercase shadow-[0_14px_30px_-10px_rgba(37,211,102,0.75)] transition-all hover:bg-[#1ebe5d] active:scale-[0.98] w-full max-w-[310px] mt-6 cursor-pointer text-center whitespace-nowrap"
           >
-            Quero falar com a fábrica
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white shadow-[0_4px_10px_rgba(0,0,0,0.12)]">
+              <img src="/whatsapp-logo.svg" alt="WhatsApp" className="h-5 w-5" />
+            </span>
+            <span>Quero falar com a fábrica</span>
           </a>
         </div>
       </div>
