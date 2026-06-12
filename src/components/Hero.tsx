@@ -82,36 +82,39 @@ export const Hero: React.FC = () => {
         <div className="absolute inset-x-0 top-0 h-[45%] bg-gradient-to-b from-white via-white/95 to-transparent z-1 pointer-events-none" />
         
         {/* Conteúdo Sobreposto no Topo */}
-        <div className="absolute inset-0 z-10 flex flex-col justify-start items-center text-center px-6 pt-[clamp(10px,2.6svh,24px)] pb-[96px]">
-          {/* Estrelas */}
-          <div className="flex justify-center gap-0.5 text-pink shrink-0">
-            <svg className="w-[clamp(14px,4.6vw,18px)] h-[clamp(14px,4.6vw,18px)] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            <svg className="w-[clamp(14px,4.6vw,18px)] h-[clamp(14px,4.6vw,18px)] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            <svg className="w-[clamp(14px,4.6vw,18px)] h-[clamp(14px,4.6vw,18px)] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            <svg className="w-[clamp(14px,4.6vw,18px)] h-[clamp(14px,4.6vw,18px)] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            <svg className="w-[clamp(14px,4.6vw,18px)] h-[clamp(14px,4.6vw,18px)] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <div className="absolute inset-0 z-10 flex flex-col justify-start items-center text-center px-5 pt-[clamp(6px,1.5svh,16px)] pb-[86px]">
+          {/* Estrelas + avaliações */}
+          <div className="flex shrink-0 items-center justify-center gap-1.5 text-pink">
+            <span className="flex items-center gap-0.5">
+              <svg className="w-[clamp(13px,4vw,17px)] h-[clamp(13px,4vw,17px)] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg className="w-[clamp(13px,4vw,17px)] h-[clamp(13px,4vw,17px)] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg className="w-[clamp(13px,4vw,17px)] h-[clamp(13px,4vw,17px)] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg className="w-[clamp(13px,4vw,17px)] h-[clamp(13px,4vw,17px)] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg className="w-[clamp(13px,4vw,17px)] h-[clamp(13px,4vw,17px)] fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </span>
+            <span className="font-fraunces text-[clamp(10.5px,3vw,13px)] text-ink font-medium tracking-tight whitespace-nowrap">
+              Baseado em +10.000 avaliações
+            </span>
           </div>
-          
-          {/* Subtítulo Avaliações */}
-          <span className="font-fraunces text-[clamp(11px,3.2vw,14px)] text-ink font-medium tracking-tight mt-[clamp(4px,1svh,6px)] shrink-0">
-            Baseado em +10.000 avaliações
-          </span>
 
           {/* Título em Rosa */}
-          <h1 className="font-fraunces font-extrabold text-[clamp(24px,7.2vw,32px)] leading-[1.08] tracking-tight text-pink max-w-[320px] sm:max-w-[380px] m-0 mt-[clamp(10px,2.2svh,16px)]">
-            Acesso direto à fábrica para lojistas e revendedores de cosméticos.
+          <h1 className="font-fraunces font-extrabold text-[clamp(25px,7.6vw,31px)] leading-[1.02] tracking-tight text-pink max-w-[350px] m-0 mt-[clamp(7px,1.5svh,12px)]">
+            <span className="block">Acesso direto à fábrica</span>
+            <span className="block">para lojistas e revendedores</span>
+            <span className="block">de cosméticos.</span>
           </h1>
           
           {/* Texto Descritivo */}
-          <p className="font-fraunces text-[clamp(12px,3.45vw,16px)] text-[#111] max-w-[310px] xs:max-w-[340px] sm:max-w-[380px] leading-[1.32] m-0 mt-[clamp(8px,1.8svh,12px)] font-medium">
-            A Ledebut está abrindo novos parceiros no Brasil para atender a alta demanda com margens de até 5x
+          <p className="font-fraunces text-[clamp(12px,3.35vw,14px)] text-[#111] max-w-[340px] leading-[1.25] m-0 mt-[clamp(6px,1.3svh,10px)] font-medium">
+            <span className="block">Novos parceiros no Brasil para atender</span>
+            <span className="block">alta demanda com margens de até 5x</span>
           </p>
           
           {/* Botão WhatsApp principal no mobile */}
           <a 
             href="#form" 
             onClick={handleWhatsappRedirect}
-            className="animate-whatsapp-pulse inline-flex items-center justify-center gap-2.5 bg-[#25D366] text-white py-[clamp(12px,3.4svh,14px)] px-5 rounded-full font-sora font-extrabold text-[clamp(12px,3.35vw,14px)] tracking-wider uppercase shadow-[0_14px_30px_-10px_rgba(37,211,102,0.75)] transition-all hover:bg-[#1ebe5d] active:scale-[0.98] w-full max-w-[310px] mt-[clamp(14px,3svh,24px)] cursor-pointer text-center whitespace-nowrap"
+            className="animate-whatsapp-pulse inline-flex items-center justify-center gap-2.5 bg-[#25D366] text-white py-[clamp(11px,3svh,13px)] px-5 rounded-full font-sora font-extrabold text-[clamp(12px,3.3vw,13.5px)] tracking-wider uppercase shadow-[0_14px_30px_-10px_rgba(37,211,102,0.75)] transition-all hover:bg-[#1ebe5d] active:scale-[0.98] w-full max-w-[306px] mt-[clamp(10px,2.2svh,16px)] cursor-pointer text-center whitespace-nowrap"
           >
             <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white shadow-[0_4px_10px_rgba(0,0,0,0.12)]">
               <img src="/whatsapp-logo.svg" alt="WhatsApp" className="h-5 w-5" />
@@ -124,7 +127,7 @@ export const Hero: React.FC = () => {
         <a
           href="#campeoes"
           aria-label="Arraste para cima para ver mais conteúdo"
-          className="liquid-glass-scroll-cue absolute left-1/2 bottom-[max(14px,env(safe-area-inset-bottom))] z-20 flex -translate-x-1/2 flex-col items-center gap-1.5 rounded-full px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.18em] text-ink/80"
+          className="absolute left-1/2 bottom-[max(12px,env(safe-area-inset-bottom))] z-20 flex -translate-x-1/2 flex-col items-center gap-1 text-[10px] font-bold uppercase tracking-[0.18em] text-ink/80 drop-shadow-[0_2px_6px_rgba(255,255,255,0.75)]"
         >
           <span>Arraste</span>
           <span className="flex flex-col items-center gap-1">
