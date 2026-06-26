@@ -1,4 +1,4 @@
-const whatsappNumbers = ['557181751436', '557182960926', '557182931532'];
+const whatsappNumbers = ['15559922763'];
 const whatsappMessage = 'Olá! Gostaria de receber o catálogo de revenda da Ledebut e falar com a fábrica.';
 
 const getRandomWhatsappNumber = () => {
